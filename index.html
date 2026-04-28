@@ -12,28 +12,24 @@
       color: #333;
     }
 
-    .header {
+    .page {
       padding: 20px;
+    }
+
+    .header {
       font-size: 22px;
+      margin-bottom: 12px;
     }
 
-    /* LINEA SOPRA (HEADER) */
-    .line-top {
-      height: 1px;
-      background: #333;
-      margin: 20px 20px 30px 20px;
-    }
-
-    /* LINEE SOTTO (FOOTER) */
     .line {
       height: 1px;
       background: #333;
-      margin: 10px 20px;
+      width: 100%;
     }
 
     .container {
       position: relative;
-      padding: 20px;
+      margin-top: 8px;
     }
 
     .container img {
@@ -44,7 +40,7 @@
 
     .coming {
       position: absolute;
-      top: 40px;
+      top: 28px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 16px;
@@ -54,7 +50,7 @@
     }
 
     .footer {
-      margin: 40px 20px;
+      margin-top: 8px;
       font-size: 14px;
     }
 
@@ -62,11 +58,7 @@
       display: inline-block;
       margin: 10px 0;
       color: #333;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      opacity: 0.6;
+      text-decoration: underline;
     }
 
     .username {
@@ -78,28 +70,26 @@
 
 <body>
 
-  <!-- NOME -->
-  <div class="header">Iacopo Pasqui</div>
+  <div class="page">
 
-  <!-- LINEA SOPRA -->
-  <div class="line-top"></div>
-
-  <!-- FOTO -->
-  <div class="container">
-    <div class="coming">COMING SOON</div>
-    <img src="foto.jpg" alt="Foto">
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
+    <div class="header">Iacopo Pasqui</div>
 
     <div class="line"></div>
 
-    <a href="https://instagram.com/iacopopasqui" target="_blank">Instagram</a>
+    <div class="container">
+      <div class="coming">COMING SOON</div>
+      <img src="foto.jpg" alt="Foto">
+    </div>
 
-    <div class="line"></div>
+    <div class="footer">
+      <div class="line"></div>
 
-    <div class="username">@iacopopasqui</div>
+      <a href="https://instagram.com/iacopopasqui" target="_blank">Instagram</a>
+
+      <div class="line"></div>
+
+      <div class="username">@iacopopasqui</div>
+    </div>
 
   </div>
 
