@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <title>Info — Iacopo Pasqui</title>
 
-  <!-- FONT INTER -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
@@ -21,7 +18,7 @@
     .page {
       max-width: 1600px;
       margin: 0 auto;
-      padding: 40px 60px;
+      padding: 40px 45px;
     }
 
     .header {
@@ -35,21 +32,40 @@
       height: 1px;
       background: #333;
       width: 100%;
-      margin: 20px 0;
+    }
+
+    .top-line {
+      margin-bottom: 36px;
     }
 
     .content {
-      max-width: 700px;
+      max-width: 1050px;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.45;
     }
 
-    .section {
-      margin-top: 30px;
+    .content p {
+      margin: 0 0 22px 0;
+    }
+
+    .content a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .content a:hover {
+      opacity: 0.6;
+    }
+
+    .contact {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid #333;
     }
 
     .footer {
-      margin-top: 60px;
+      margin-top: 300px;
       font-size: 14px;
     }
 
@@ -57,6 +73,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: 12px 0;
     }
 
     .left-links {
@@ -81,14 +98,17 @@
       opacity: 0.7;
     }
 
-    /* MOBILE */
     @media (max-width: 768px) {
       .page {
-        padding: 10px;
+        padding: 20px;
       }
 
       .content {
         max-width: 100%;
+      }
+
+      .footer {
+        margin-top: 120px;
       }
 
       .footer-row {
@@ -109,11 +129,9 @@
 
   <div class="page">
 
-    <!-- HEADER -->
     <div class="header">Iacopo Pasqui</div>
-    <div class="line"></div>
+    <div class="line top-line"></div>
 
-    <!-- BIO -->
     <div class="content">
       <p>
         Iacopo Pasqui was born in Florence in 1984.<br>
@@ -135,21 +153,15 @@
         Internazionale, D di Repubblica and others. It is represented by the German Connected Archive based in Berlin.
       </p>
 
-      <div class="line"></div>
-
-      <!-- CONTACT -->
-      <div class="section">
+      <div class="contact">
         <p>contact:</p>
         <p>
-          mail: studio@iacopopasqui.it<br>
-          instagram: @iacopopasqui
+          mail: <a href="mailto:studio@iacopopasqui.it">studio@iacopasqui.it</a>
         </p>
       </div>
     </div>
 
-    <!-- FOOTER -->
     <div class="footer">
-
       <div class="line"></div>
 
       <div class="footer-row">
@@ -164,6 +176,7 @@
         </div>
       </div>
 
+      <div class="line"></div>
     </div>
 
   </div>
