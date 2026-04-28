@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <title>Iacopo Pasqui</title>
 
-  <!-- FONT INTER -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
@@ -21,10 +18,9 @@
     .page {
       max-width: 1600px;
       margin: 0 auto;
-      padding: 40px 45px;
+      padding: 40px 60px;
     }
 
-    /* HEADER */
     .header {
       font-size: 22px;
       font-weight: 400;
@@ -36,20 +32,19 @@
       height: 1px;
       background: #333;
       width: 100%;
-    }
-
-    .container {
-      margin-top: 12px;
-    }
-
-    .container img {
-      width: 100%;
-      height: auto;
-      display: block;
       margin: 20px 0;
     }
 
-    /* FOOTER */
+    .image-wrapper {
+      margin: 20px 0;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .footer {
       margin-top: 24px;
       font-size: 14px;
@@ -59,7 +54,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 10px 0;
+      margin: 12px 0;
     }
 
     .left-links {
@@ -88,7 +83,6 @@
       opacity: 0.7;
     }
 
-    /* MOBILE */
     @media (max-width: 768px) {
       .page {
         padding: 10px;
@@ -101,14 +95,14 @@
       .footer-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 10px;
       }
 
       .left-links {
         gap: 20px;
+        flex-wrap: wrap;
       }
     }
-
   </style>
 </head>
 
@@ -116,37 +110,28 @@
 
   <div class="page">
 
-    <!-- NOME -->
     <div class="header">Iacopo Pasqui</div>
 
     <div class="line"></div>
 
-    <!-- FOTO -->
-    <div class="container">
+    <div class="image-wrapper">
       <img src="foto.jpg" alt="Foto">
     </div>
 
-    <!-- FOOTER -->
     <div class="footer">
-
       <div class="line"></div>
 
       <div class="footer-row">
-
         <div class="left-links">
-  <a href="info.html">Info</a>
-  <a href="https://instagram.com/iacopopasqui" target="_blank">Instagram</a>
-  <a class="connected" href="https://www.connected-archives.com/-/galleries/photographer/iacopo-pasqui" target="_blank">Connected Archive</a>
-</div>
-
-        <div class="copyright">
-          © 2026 Iacopo Pasqui
+          <a href="info.html">Info</a>
+          <a href="https://instagram.com/iacopopasqui" target="_blank">Instagram</a>
+          <a class="connected" href="https://www.connected-archives.com/-/galleries/photographer/iacopo-pasqui" target="_blank">Connected Archive</a>
         </div>
 
+        <div class="copyright">© 2026 Iacopo Pasqui</div>
       </div>
 
       <div class="line"></div>
-
     </div>
 
   </div>
