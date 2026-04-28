@@ -54,26 +54,26 @@
       font-size: 14px;
     }
 
-    .footer a {
-      display: inline-block;
+    .footer-row {
+      display: flex;
+      gap: 30px;
+      align-items: center;
       margin: 10px 0;
-      color: #333;
-      text-decoration: none;
     }
 
-    .footer a:hover {
+    .footer-row a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+    }
+
+    .footer-row a:hover {
       opacity: 0.6;
     }
 
     /* LINK PROFESSIONALI */
-    .links {
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-
-    .links a {
-      display: block;
-      font-weight: 600; /* BOLD vero per Connected Archive */
+    .connected {
+      font-weight: 500; /* PERFETTO */
     }
 
     .username {
@@ -90,6 +90,10 @@
 
       .header {
         font-size: 20px;
+      }
+
+      .footer-row {
+        gap: 20px;
       }
     }
 
@@ -115,22 +119,15 @@
 
       <div class="line"></div>
 
-      <a href="https://instagram.com/iacopopasqui" target="_blank">Instagram</a>
+      <div class="footer-row">
+        <a href="https://instagram.com/iacopopasqui" target="_blank">Instagram</a>
 
-      <div class="line"></div>
-
-      <div class="links">
-        <a href="https://www.connected-archives.com/-/galleries/photographer/iacopo-pasqui" target="_blank">
+        <a class="connected" href="https://www.connected-archives.com/-/galleries/photographer/iacopo-pasqui" target="_blank">
           Connected Archive
         </a>
-
-        <!-- FUTURO -->
-        <!--
-        <a href="https://ceravento.com" target="_blank">
-          Ceravento
-        </a>
-        -->
       </div>
+
+      <div class="line"></div>
 
       <div class="username">@iacopopasqui</div>
 
