@@ -68,7 +68,7 @@
       color: #333;
       font-weight: 400;
       opacity: 0.72;
-      transition: opacity 0.25s ease, font-weight 0.25s ease;
+      transition: opacity 0.25s ease;
     }
 
     .left-links a::after {
@@ -84,21 +84,18 @@
       transition: transform 0.25s ease;
     }
 
-    .left-links a:hover {
+    .left-links a:hover,
+    .left-links a.active {
       opacity: 1;
     }
 
-    .left-links a:hover::after {
+    .left-links a:hover::after,
+    .left-links a.active::after {
       transform: scaleX(1);
     }
 
     .left-links a.active {
       font-weight: 500;
-      opacity: 1;
-    }
-
-    .left-links a.active::after {
-      transform: scaleX(1);
     }
 
     .connected {
