@@ -62,8 +62,13 @@
       border-top: 1px solid #333;
     }
 
+    .contact a {
+      text-decoration: none;
+    }
+
     .contact a:hover {
       text-decoration: underline;
+      opacity: 1;
     }
 
     .footer {
@@ -89,7 +94,7 @@
       color: #333;
       font-weight: 400;
       opacity: 0.72;
-      transition: opacity 0.25s ease, font-weight 0.25s ease;
+      transition: opacity 0.25s ease;
     }
 
     .left-links a::after {
@@ -105,21 +110,18 @@
       transition: transform 0.25s ease;
     }
 
-    .left-links a:hover {
+    .left-links a:hover,
+    .left-links a.active {
       opacity: 1;
     }
 
-    .left-links a:hover::after {
+    .left-links a:hover::after,
+    .left-links a.active::after {
       transform: scaleX(1);
     }
 
     .left-links a.active {
       font-weight: 500;
-      opacity: 1;
-    }
-
-    .left-links a.active::after {
-      transform: scaleX(1);
     }
 
     .connected {
@@ -136,6 +138,14 @@
     @media (max-width: 768px) {
       .page {
         padding: 10px;
+      }
+
+      .content {
+        max-width: 100%;
+      }
+
+      .footer {
+        margin-top: 120px;
       }
 
       .footer-row {
@@ -167,7 +177,19 @@
       </p>
 
       <p>
-        Throughout his career, he has received numerous awards...
+        Throughout his career, he has received numerous awards, including Strategia Fotografia 2023 and Italian Council 2023, both promoted by the Italian Ministry of Culture, as well as Giovane Fotografia Italiana #07 at the Fotografia Europea Festival in 2019. Since 2019, he has been a member of the Future Talents Photographers. Earlier in his career, he won the Leica Talent 24x36 and the Panorami Contemporanei e Luoghi in Trasformazione – Residenze di Fotografia in Italia (MiBACT and GAI, 2017).
+      </p>
+
+      <p>
+        His work is included in the volume <em>Storia della fotografia in Italia. Dal 1839 ad oggi</em> by G. D’Autilia (Einaudi, Turin, 2021). His works are part of important public and private collections, including the Fondazione Musei Civici di Reggio Emilia, the Fondo di acquisto Fiere di Parma, Fondazione La Rocca and Fondazione Aria.
+      </p>
+
+      <p>
+        He is the author of several publications and has collaborated with numerous public and private institutions, including ICCD, the Italian Ministry of Culture, the Italian Cultural Institutes in London and Stockholm, the Istituto della Enciclopedia Italiana G. Treccani, the Fondazione Musei Civici di Reggio Emilia, and GAI. His work has been published by international publishers and magazines such as Einaudi, Witty Books, L’Espresso, Financial Times, Frankfurter Allgemeine Quarterly, Die Zeit Magazine, Internazionale, and D la Repubblica.
+      </p>
+
+      <p>
+        He is represented by Connected Archive, based in Berlin.
       </p>
 
       <div class="contact">
