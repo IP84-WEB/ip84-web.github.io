@@ -39,70 +39,58 @@
       max-width: 820px;
       font-size: 14px;
       line-height: 1.55;
-      letter-spacing: -0.1px;
     }
 
-    .portfolio-block {
-      margin-bottom: 36px;
+    .block {
+      margin-bottom: 40px;
     }
 
-    .portfolio-title {
+    .title {
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .portfolio-note {
-      margin-bottom: 14px;
-      color: #555;
+    .note {
+      color: #777;
+      margin-bottom: 12px;
     }
 
     input {
-      width: 260px;
       border: none;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid #999;
+      background: transparent;
       padding: 6px 0;
-      font-family: 'Inter', sans-serif;
       font-size: 14px;
+      font-family: 'Inter', sans-serif;
       outline: none;
-      color: #333;
-      background: transparent;
+      width: 220px;
+      transition: border-color 0.3s ease;
     }
 
-    button {
-      margin-left: 14px;
-      border: none;
-      background: transparent;
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      color: #333;
-      cursor: pointer;
-      opacity: 0.72;
+    input:focus {
+      border-bottom: 1px solid #333;
     }
 
-    button:hover {
+    .link {
+      margin-top: 12px;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: all 0.3s ease;
+    }
+
+    .link.visible {
       opacity: 1;
+      transform: translateY(0);
     }
 
-    .download-link {
-      display: none;
-      margin-top: 14px;
-    }
-
-    .download-link a {
-      color: #333;
+    .link a {
       text-decoration: none;
+      color: #333;
       font-weight: 500;
     }
 
-    .download-link a:hover {
+    .link a:hover {
       opacity: 0.6;
-    }
-
-    .error {
-      display: none;
-      margin-top: 10px;
-      color: #777;
-      font-size: 13px;
     }
 
     .contact {
@@ -112,17 +100,14 @@
     }
 
     .contact a {
-      color: #333;
       text-decoration: none;
       font-weight: 600;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
+      color: #333;
     }
 
     .footer {
       margin-top: 200px;
+      font-size: 14px;
     }
 
     .footer-row {
@@ -141,7 +126,6 @@
       position: relative;
       text-decoration: none;
       color: #333;
-      font-weight: 400;
       opacity: 0.72;
       transition: opacity 0.25s ease;
     }
@@ -180,7 +164,6 @@
     .copyright {
       font-size: 12px;
       color: #666;
-      font-weight: 300;
       opacity: 0.7;
     }
 
@@ -191,19 +174,8 @@
         padding: 10px 0;
       }
 
-      .content {
-        max-width: 100%;
-      }
-
       input {
         width: 100%;
-        max-width: 280px;
-      }
-
-      button {
-        margin-left: 0;
-        margin-top: 12px;
-        display: block;
       }
 
       .footer {
@@ -234,36 +206,22 @@
 
     <div class="content">
 
-      <div class="portfolio-block">
-        <div class="portfolio-title">Fine Art Portfolio</div>
-        <div class="portfolio-note">
-          Enter password to view or download the portfolio.
+      <div class="block">
+        <div class="title">Fine Art Portfolio</div>
+        <div class="note">Access restricted portfolio.</div>
+        <input type="password" id="fine" placeholder="password">
+        <div class="link" id="fineLink">
+          <a href="INSERISCI_LINK_FINE_ART" target="_blank">open portfolio</a>
         </div>
-
-        <input type="password" id="finePassword" placeholder="password">
-        <button onclick="checkFineArt()">enter</button>
-
-        <div class="download-link" id="fineLink">
-          <a href="INSERISCI_LINK_DRIVE_FINE_ART" target="_blank">open / download Fine Art Portfolio</a>
-        </div>
-
-        <div class="error" id="fineError">wrong password</div>
       </div>
 
-      <div class="portfolio-block">
-        <div class="portfolio-title">Commercial Portfolio</div>
-        <div class="portfolio-note">
-          Enter password to view or download the portfolio.
+      <div class="block">
+        <div class="title">Commercial Portfolio</div>
+        <div class="note">Access restricted portfolio.</div>
+        <input type="password" id="comm" placeholder="password">
+        <div class="link" id="commLink">
+          <a href="INSERISCI_LINK_COMMERCIAL" target="_blank">open portfolio</a>
         </div>
-
-        <input type="password" id="commercialPassword" placeholder="password">
-        <button onclick="checkCommercial()">enter</button>
-
-        <div class="download-link" id="commercialLink">
-          <a href="INSERISCI_LINK_DRIVE_COMMERCIAL" target="_blank">open / download Commercial Portfolio</a>
-        </div>
-
-        <div class="error" id="commercialError">wrong password</div>
       </div>
 
       <div class="contact">
@@ -296,33 +254,21 @@
   </div>
 
   <script>
-    function checkFineArt() {
-      const password = document.getElementById("finePassword").value;
-      const link = document.getElementById("fineLink");
-      const error = document.getElementById("fineError");
-
-      if (password === "PASSWORD_FINE_ART") {
-        link.style.display = "block";
-        error.style.display = "none";
-      } else {
-        link.style.display = "none";
-        error.style.display = "block";
+    document.getElementById("fine").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        if (this.value === "PASSWORD_FINE") {
+          document.getElementById("fineLink").classList.add("visible");
+        }
       }
-    }
+    });
 
-    function checkCommercial() {
-      const password = document.getElementById("commercialPassword").value;
-      const link = document.getElementById("commercialLink");
-      const error = document.getElementById("commercialError");
-
-      if (password === "PASSWORD_COMMERCIAL") {
-        link.style.display = "block";
-        error.style.display = "none";
-      } else {
-        link.style.display = "none";
-        error.style.display = "block";
+    document.getElementById("comm").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        if (this.value === "PASSWORD_COMMERCIAL") {
+          document.getElementById("commLink").classList.add("visible");
+        }
       }
-    }
+    });
   </script>
 
 </body>
