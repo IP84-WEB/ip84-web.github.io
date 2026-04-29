@@ -63,13 +63,42 @@
     }
 
     .left-links a {
+      position: relative;
       text-decoration: none;
       color: #333;
       font-weight: 400;
+      opacity: 0.72;
+      transition: opacity 0.25s ease, font-weight 0.25s ease;
+    }
+
+    .left-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background: #333;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
     }
 
     .left-links a:hover {
-      opacity: 0.6;
+      opacity: 1;
+    }
+
+    .left-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .left-links a.active {
+      font-weight: 500;
+      opacity: 1;
+    }
+
+    .left-links a.active::after {
+      transform: scaleX(1);
     }
 
     .connected {
@@ -123,7 +152,9 @@
 
       <div class="footer-row">
         <div class="left-links">
+          <a href="index.html" class="active">Home</a>
           <a href="info.html">Info</a>
+          <a href="portfolio.html">Portfolio</a>
           <a href="https://instagram.com/iacopopasqui" target="_blank">Instagram</a>
           <a class="connected" href="https://www.connected-archives.com/-/galleries/photographer/iacopo-pasqui" target="_blank">Connected Archive</a>
         </div>
