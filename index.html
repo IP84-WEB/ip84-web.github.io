@@ -13,6 +13,11 @@
       font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #333;
+      .sticky-header {
+  position: sticky;
+  top: 40px;
+  background: #transparent;
+  z-index: 10;
     }
 
     .page {
@@ -137,10 +142,10 @@
 <body>
 
   <div class="page">
-
+<div class="sticky-header">
     <div class="header">Iacopo Pasqui</div>
-
-    <div class="line"></div>
+    <div class="line">
+    </div>
 
     <div class="image-wrapper">
       <img src="foto.jpg" alt="Foto">
