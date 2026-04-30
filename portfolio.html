@@ -9,24 +9,23 @@
 
   <style>
     body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #333;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
     .page {
-  margin-left: 60px;
-  margin-right: 60px;
-  padding: 40px 0;
-  min-height: calc(100vh - 80px);
-  display: flex;
-  flex-direction: column;
-}
+      margin-left: 60px;
+      margin-right: 60px;
+      padding: 40px 0;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+    }
 
     .header {
       font-size: 22px;
@@ -43,18 +42,18 @@
     }
 
     .line-spaced {
-  display: none;
-}
+      display: none;
+    }
 
     .content {
-  max-width: 820px;
-  font-size: 14px;
-  line-height: 1.55;
-}
+      max-width: 820px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
 
-.content p {
-  margin: 0 0 18px 0;
-}
+    .content p {
+      margin: 0 0 18px 0;
+    }
 
     .block {
       margin-bottom: 40px;
@@ -70,7 +69,8 @@
       margin-bottom: 12px;
     }
 
-    input {
+    input,
+    textarea {
       border: none;
       border-bottom: 1px solid #999;
       background: transparent;
@@ -80,39 +80,42 @@
       outline: none;
       width: 220px;
       transition: border-color 0.3s ease;
+      color: #333;
     }
 
-    input:focus {
+    textarea {
+      width: 320px;
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    input:focus,
+    textarea:focus {
       border-bottom: 1px solid #333;
     }
 
-    .link {
-      margin-top: 12px;
-      opacity: 0;
-      transform: translateY(5px);
-      transition: all 0.3s ease;
-    }
-
-    .link.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .link a {
-      text-decoration: none;
+    button {
+      margin-top: 6px;
+      background: none;
+      border: 1px solid #333;
+      padding: 8px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
       color: #333;
-      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
     }
 
-    .link a:hover {
-      opacity: 0.6;
+    button:hover {
+      background: #333;
+      color: #fff;
     }
 
-   .contact {
-  margin-top: 40px;
-  padding-top: 18px;
-  border-top: 1px solid #333;
-}
+    .contact {
+      margin-top: 40px;
+      padding-top: 18px;
+      border-top: 1px solid #333;
+    }
 
     .contact a {
       text-decoration: none;
@@ -185,13 +188,14 @@
 
     @media (max-width: 768px) {
       .page {
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 10px 0;
-  min-height: calc(100vh - 20px);
-}
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px 0;
+        min-height: calc(100vh - 20px);
+      }
 
-      input {
+      input,
+      textarea {
         width: 100%;
       }
 
@@ -225,27 +229,42 @@
 
       <div class="block">
         <div class="title">Fine Art Portfolio</div>
-        <div class="note">Access restricted portfolio.</div>
-        <input type="password" id="fine" placeholder="password">
-        <div class="link" id="fineLink">
-          <a href="INSERISCI_LINK_FINE_ART" target="_blank">open portfolio</a>
-        </div>
+        <div class="note">Access available upon request.</div>
+
+        <form action="https://formspree.io/f/xvzlpnpe" method="POST">
+          <input type="hidden" name="_subject" value="Fine Art Portfolio request">
+          <input type="hidden" name="_redirect" value="https://www.iacopopasqui.it/thanks.html">
+          <input type="hidden" name="portfolio" value="Fine Art Portfolio">
+
+          <input type="text" name="name" placeholder="your name" required><br><br>
+          <input type="email" name="email" placeholder="your email" required><br><br>
+          <textarea name="message" placeholder="optional message"></textarea><br><br>
+
+          <button type="submit">Request access</button>
+        </form>
       </div>
 
       <div class="block">
         <div class="title">Commercial Portfolio</div>
-        <div class="note">Access restricted portfolio.</div>
-        <input type="password" id="comm" placeholder="password">
-        <div class="link" id="commLink">
-          <a href="INSERISCI_LINK_COMMERCIAL" target="_blank">open portfolio</a>
-        </div>
+        <div class="note">Access available upon request.</div>
+
+        <form action="https://formspree.io/f/xvzlpnpe" method="POST">
+          <input type="hidden" name="_subject" value="Commercial Portfolio request">
+          <input type="hidden" name="_redirect" value="https://www.iacopopasqui.it/thanks.html">
+          <input type="hidden" name="portfolio" value="Commercial Portfolio">
+
+          <input type="text" name="name" placeholder="your name" required><br><br>
+          <input type="email" name="email" placeholder="your email" required><br><br>
+          <textarea name="message" placeholder="optional message"></textarea><br><br>
+
+          <button type="submit">Request access</button>
+        </form>
       </div>
 
-      <!-- linea corretta come info -->
       <div class="line-spaced"></div>
 
       <div class="contact">
-        <p>To request access:</p>
+        <p>For any additional request:</p>
         <p>
           mail: <a href="mailto:info@iacopopasqui.it"><strong>info@iacopopasqui.it</strong></a>
         </p>
@@ -272,24 +291,6 @@
     </div>
 
   </div>
-
-  <script>
-    document.getElementById("fine").addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        if (this.value === "PASSWORD_FINE") {
-          document.getElementById("fineLink").classList.add("visible");
-        }
-      }
-    });
-
-    document.getElementById("comm").addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        if (this.value === "PASSWORD_COMMERCIAL") {
-          document.getElementById("commLink").classList.add("visible");
-        }
-      }
-    });
-  </script>
 
 </body>
 </html>
