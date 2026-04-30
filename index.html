@@ -179,6 +179,16 @@
     </div>
 
   </div>
+<script>
+  window.addEventListener("scroll", function() {
+    const header = document.querySelector(".sticky-header");
 
+    if (window.scrollY > 20) {
+      header.style.opacity = "0.85";
+    } else {
+      header.style.opacity = "1";
+    }
+  });
+</script>
 </body>
 </html>
