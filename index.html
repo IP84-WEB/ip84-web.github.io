@@ -38,6 +38,7 @@
       font-weight: 400;
       letter-spacing: -0.6px;
       margin-bottom: 16px;
+      text-shadow: 0 0 6px rgba(255,255,255,0.6);
     }
 
     .line {
@@ -192,7 +193,7 @@
     window.addEventListener("scroll", function() {
       const header = document.querySelector(".sticky-header");
 
-      if (window.scrollY > 20) {
+      if (window.scrollY > 60) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
