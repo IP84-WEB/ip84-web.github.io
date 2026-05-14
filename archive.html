@@ -71,17 +71,36 @@
     }
 
     .project-list a {
-      display: block;
-      width: fit-content;
-      text-decoration: none;
-      color: #333;
-      margin-bottom: 6px;
-      font-weight: 400;
-      transition: opacity 0.25s ease;
-    }
+  position: relative;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 400;
+  opacity: 0.72;
+  transition: opacity 0.25s ease;
+}
 
-    .project-list a:hover {
-      opacity: 0.55;
+.project-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.project-list a:hover {
+  opacity: 1;
+}
+
+.project-list a:hover::after {
+  transform: scaleX(1);
     }
     .footer {
       margin-top: auto;
