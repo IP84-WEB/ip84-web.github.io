@@ -136,6 +136,34 @@
       opacity: 0.7;
     }
 
+          .lightbox {
+      position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+}
+
+.item img {
+  cursor: pointer;
+}
+}
     @media (max-width: 1024px) {
       .gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -167,9 +195,8 @@
         gap: 20px;
         flex-wrap: wrap;
       }
-
-    }
-
+      }
+    
   </style>
 </head>
 
@@ -628,6 +655,28 @@
     </div>
 
   </div>
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
 
+<script>
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  document.querySelectorAll('.item img').forEach(img => {
+
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+</script>
 </body>
 </html>
