@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>A day with us — Iacopo Pasqui</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #333;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .page {
+      margin-left: 60px;
+      margin-right: 60px;
+      padding: 40px 0;
+    }
+
+    .header {
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: -0.6px;
+      margin-bottom: 0px;
+      text-shadow: 0 0 6px rgba(255,255,255,0.6);
+    }
+
+    .header-line {
+      height: 1px;
+      background: #333;
+      width: 100%;
+      margin-top: 12px;
+      margin-bottom: 20px;
+    }
+
+    .footer-line {
+      height: 1px;
+      background: #333;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .project-title {
+      margin-top: 60px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 36px 32px;
+      margin-top: 40px;
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .code {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #777;
+      letter-spacing: 0.3px;
+    }
+
+    .footer {
+      margin-top: 80px;
+      font-size: 14px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 0;
+    }
+
+    .left-links {
+      display: flex;
+      gap: 50px;
+    }
+
+    .left-links a {
+      position: relative;
+      text-decoration: none;
+      color: #333;
+      font-weight: 400;
+      opacity: 0.72;
+      transition: opacity 0.25s ease;
+    }
+
+    .left-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background: #333;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    .left-links a:hover,
+    .left-links a.active {
+      opacity: 1;
+    }
+
+    .left-links a:hover::after,
+    .left-links a.active::after {
+      transform: scaleX(1);
+    }
+
+    .left-links a.active {
+      font-weight: 500;
+    }
+
+    .connected {
+      font-weight: 500;
+    }
+
+    .copyright {
+      font-size: 12px;
+      color: #666;
+      font-weight: 300;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 34px 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .page {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px 0;
+      }
+
+      .project-title {
+        margin-top: 50px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 10px;
+        margin-top: 32px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .left-links {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="header">Iacopo Pasqui</div>
+    <div class="header-line"></div>
+
+    <div class="project-title">A day with us</div>
+
+    <div class="gallery">
+
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_001.jpg" alt="LA_001">
+        <div class="code">IP_LA_001</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_002.jpg" alt="LA_002">
+        <div class="code">IP_LA_002</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_003.jpg" alt="LA_003">
+        <div class="code">IP_LA_003</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_004.jpg" alt="LA_004">
+        <div class="code">IP_LA_004</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_005.jpg" alt="LA_005">
+        <div class="code">IP_LA_005</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_006.jpg" alt="LA_006">
+        <div class="code">IP_LA_006</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_007.jpg" alt="LA_007">
+        <div class="code">IP_LA_007</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_008.jpg" alt="LA_008">
+        <div class="code">IP_LA_008</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_009.jpg" alt="LA_009">
+        <div class="code">IP_LA_009</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_010.jpg" alt="LA_010">
+        <div class="code">IP_LA_010</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_011.jpg" alt="LA_011">
+        <div class="code">IP_LA_011</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_012.jpg" alt="LA_012">
+        <div class="code">IP_LA_012</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_013.jpg" alt="LA_013">
+        <div class="code">IP_LA_013</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_014.jpg" alt="LA_014">
+        <div class="code">IP_LA_014</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_015.jpg" alt="LA_015">
+        <div class="code">IP_LA_015</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_016.jpg" alt="LA_016">
+        <div class="code">IP_LA_016</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_017.jpg" alt="LA_017">
+        <div class="code">IP_LA_017</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_018.jpg" alt="LA_018">
+        <div class="code">IP_LA_018</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_019.jpg" alt="LA_019">
+        <div class="code">IP_LA_019</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_020.jpg" alt="LA_020">
+        <div class="code">IP_LA_020</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_021.jpg" alt="LA_021">
+        <div class="code">IP_LA_021</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_022.jpg" alt="LA_022">
+        <div class="code">IP_LA_022</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_023.jpg" alt="LA_023">
+        <div class="code">IP_LA_023</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_024.jpg" alt="LA_024">
+        <div class="code">IP_LA_024</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_025.jpg" alt="LA_025">
+        <div class="code">IP_LA_025</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_026.jpg" alt="LA_026">
+        <div class="code">IP_LA_026</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_027.jpg" alt="LA_027">
+        <div class="code">IP_LA_027</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_028.jpg" alt="LA_028">
+        <div class="code">IP_LA_028</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_029.jpg" alt="LA_029">
+        <div class="code">IP_LA_029</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_030.jpg" alt="LA_030">
+        <div class="code">IP_LA_030</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_031.jpg" alt="LA_031">
+        <div class="code">IP_LA_031</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_032.jpg" alt="LA_032">
+        <div class="code">IP_LA_032</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_033.jpg" alt="LA_033">
+        <div class="code">IP_LA_033</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_034.jpg" alt="LA_034">
+        <div class="code">IP_LA_034</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_035.jpg" alt="LA_035">
+        <div class="code">IP_LA_035</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_036.jpg" alt="LA_036">
+        <div class="code">IP_LA_036</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_037.jpg" alt="LA_037">
+        <div class="code">IP_LA_037</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_038.jpg" alt="LA_038">
+        <div class="code">IP_LA_038</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_039.jpg" alt="LA_039">
+        <div class="code">IP_LA_039</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_040.jpg" alt="LA_040">
+        <div class="code">IP_LA_040</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_041.jpg" alt="LA_041">
+        <div class="code">IP_LA_041</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_042.jpg" alt="LA_042">
+        <div class="code">IP_LA_042</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_043.jpg" alt="LA_043">
+        <div class="code">IP_LA_043</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_044.jpg" alt="LA_044">
+        <div class="code">IP_LA_044</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_045.jpg" alt="LA_045">
+        <div class="code">IP_LA_045</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_046.jpg" alt="LA_046">
+        <div class="code">IP_LA_046</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_047.jpg" alt="LA_047">
+        <div class="code">IP_LA_047</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_048.jpg" alt="LA_048">
+        <div class="code">IP_LA_048</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_049.jpg" alt="LA_049">
+        <div class="code">IP_LA_049</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_050.jpg" alt="LA_050">
+        <div class="code">IP_LA_050</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_051.jpg" alt="LA_051">
+        <div class="code">IP_LA_051</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_052.jpg" alt="LA_052">
+        <div class="code">IP_LA_052</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_053.jpg" alt="LA_053">
+        <div class="code">IP_LA_053</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_054.jpg" alt="LA_054">
+        <div class="code">IP_LA_054</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_055.jpg" alt="LA_055">
+        <div class="code">IP_LA_055</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_056.jpg" alt="LA_056">
+        <div class="code">IP_LA_056</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_057.jpg" alt="LA_057">
+        <div class="code">IP_LA_057</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_058.jpg" alt="LA_058">
+        <div class="code">IP_LA_058</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_059.jpg" alt="LA_059">
+        <div class="code">IP_LA_059</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_060.jpg" alt="LA_060">
+        <div class="code">IP_LA_060</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_061.jpg" alt="LA_061">
+        <div class="code">IP_LA_061</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_062.jpg" alt="LA_062">
+        <div class="code">IP_LA_062</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_063.jpg" alt="LA_063">
+        <div class="code">IP_LA_063</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_064.jpg" alt="LA_064">
+        <div class="code">IP_LA_064</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_065.jpg" alt="LA_065">
+        <div class="code">IP_LA_065</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_066.jpg" alt="LA_066">
+        <div class="code">IP_LA_066</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_067.jpg" alt="LA_067">
+        <div class="code">IP_LA_067</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_068.jpg" alt="LA_068">
+        <div class="code">IP_LA_068</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_069.jpg" alt="LA_069">
+        <div class="code">IP_LA_069</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_070.jpg" alt="LA_070">
+        <div class="code">IP_LA_070</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_071.jpg" alt="LA_071">
+        <div class="code">IP_LA_071</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_072.jpg" alt="LA_072">
+        <div class="code">IP_LA_072</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_073.jpg" alt="LA_073">
+        <div class="code">IP_LA_073</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_074.jpg" alt="LA_074">
+        <div class="code">IP_LA_074</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_075.jpg" alt="LA_075">
+        <div class="code">IP_LA_075</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_076.jpg" alt="LA_076">
+        <div class="code">IP_LA_076</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_077.jpg" alt="LA_077">
+        <div class="code">IP_LA_077</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_078.jpg" alt="LA_078">
+        <div class="code">IP_LA_078</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_079.jpg" alt="LA_079">
+        <div class="code">IP_LA_079</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_080.jpg" alt="LA_080">
+        <div class="code">IP_LA_080</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_081.jpg" alt="LA_081">
+        <div class="code">IP_LA_081</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_082.jpg" alt="LA_082">
+        <div class="code">IP_LA_082</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_083.jpg" alt="LA_083">
+        <div class="code">IP_LA_083</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_084.jpg" alt="LA_084">
+        <div class="code">IP_LA_084</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_085.jpg" alt="LA_085">
+        <div class="code">IP_LA_085</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_086.jpg" alt="LA_086">
+        <div class="code">IP_LA_086</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_087.jpg" alt="LA_087">
+        <div class="code">IP_LA_087</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_088.jpg" alt="LA_088">
+        <div class="code">IP_LA_088</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_089.jpg" alt="LA_089">
+        <div class="code">IP_LA_089</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_090.jpg" alt="LA_090">
+        <div class="code">IP_LA_090</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_091.jpg" alt="LA_091">
+        <div class="code">IP_LA_091</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_092.jpg" alt="LA_092">
+        <div class="code">IP_LA_092</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_093.jpg" alt="LA_093">
+        <div class="code">IP_LA_093</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_094.jpg" alt="LA_094">
+        <div class="code">IP_LA_094</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_095.jpg" alt="LA_095">
+        <div class="code">IP_LA_095</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_096.jpg" alt="LA_096">
+        <div class="code">IP_LA_096</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_097.jpg" alt="LA_097">
+        <div class="code">IP_LA_097</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_098.jpg" alt="LA_098">
+        <div class="code">IP_LA_098</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_099.jpg" alt="LA_099">
+        <div class="code">IP_LA_099</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_100.jpg" alt="LA_100">
+        <div class="code">IP_LA_100</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_101.jpg" alt="LA_101">
+        <div class="code">IP_LA_101</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_102.jpg" alt="LA_102">
+        <div class="code">IP_LA_102</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_103.jpg" alt="LA_103">
+        <div class="code">IP_LA_103</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_104.jpg" alt="LA_104">
+        <div class="code">IP_LA_104</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_105.jpg" alt="LA_105">
+        <div class="code">IP_LA_105</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_106.jpg" alt="LA_106">
+        <div class="code">IP_LA_106</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_107.jpg" alt="LA_107">
+        <div class="code">IP_LA_107</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_108.jpg" alt="LA_108">
+        <div class="code">IP_LA_108</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_109.jpg" alt="LA_109">
+        <div class="code">IP_LA_109</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_110.jpg" alt="LA_110">
+        <div class="code">IP_LA_110</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_111.jpg" alt="LA_111">
+        <div class="code">IP_LA_111</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_112.jpg" alt="LA_112">
+        <div class="code">IP_LA_112</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_113.jpg" alt="LA_113">
+        <div class="code">IP_LA_113</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_114.jpg" alt="LA_114">
+        <div class="code">IP_LA_114</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_115.jpg" alt="LA_115">
+        <div class="code">IP_LA_115</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_116.jpg" alt="LA_116">
+        <div class="code">IP_LA_116</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_117.jpg" alt="LA_117">
+        <div class="code">IP_LA_117</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_118.jpg" alt="LA_118">
+        <div class="code">IP_LA_118</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_119.jpg" alt="LA_119">
+        <div class="code">IP_LA_119</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_120.jpg" alt="LA_120">
+        <div class="code">IP_LA_120</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_121.jpg" alt="LA_121">
+        <div class="code">IP_LA_121</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_122.jpg" alt="LA_122">
+        <div class="code">IP_LA_122</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_123.jpg" alt="LA_123">
+        <div class="code">IP_LA_123</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_124.jpg" alt="LA_124">
+        <div class="code">IP_LA_124</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_125.jpg" alt="LA_125">
+        <div class="code">IP_LA_125</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_126.jpg" alt="LA_126">
+        <div class="code">IP_LA_126</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_127.jpg" alt="LA_127">
+        <div class="code">IP_LA_127</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_128.jpg" alt="LA_128">
+        <div class="code">IP_LA_128</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_129.jpg" alt="LA_129">
+        <div class="code">IP_LA_129</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_130.jpg" alt="LA_130">
+        <div class="code">IP_LA_130</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_131.jpg" alt="LA_131">
+        <div class="code">IP_LA_131</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_132.jpg" alt="LA_132">
+        <div class="code">IP_LA_132</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_133.jpg" alt="LA_133">
+        <div class="code">IP_LA_133</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_134.jpg" alt="LA_134">
+        <div class="code">IP_LA_134</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_135.jpg" alt="LA_135">
+        <div class="code">IP_LA_135</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_136.jpg" alt="LA_136">
+        <div class="code">IP_LA_136</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_137.jpg" alt="LA_137">
+        <div class="code">IP_LA_137</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_138.jpg" alt="LA_138">
+        <div class="code">IP_LA_138</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_139.jpg" alt="LA_139">
+        <div class="code">IP_LA_139</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_140.jpg" alt="LA_140">
+        <div class="code">IP_LA_140</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_141.jpg" alt="LA_141">
+        <div class="code">IP_LA_141</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_142.jpg" alt="LA_142">
+        <div class="code">IP_LA_142</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_143.jpg" alt="LA_143">
+        <div class="code">IP_LA_143</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_144.jpg" alt="LA_144">
+        <div class="code">IP_LA_144</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_145.jpg" alt="LA_145">
+        <div class="code">IP_LA_145</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_146.jpg" alt="LA_146">
+        <div class="code">IP_LA_146</div>
+      </div>
+      <div class="item">
+        <img src="archive/a-day-with-us/IP_LA_147.jpg" alt="LA_147">
+        <div class="code">IP_LA_147</div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+
+      <div class="footer-line"></div>
+
+      <div class="footer-row">
+
+        <div class="left-links">
+          <a href="index.html">Home</a>
+          <a href="info.html">Info</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="archive.html" class="active">Archive</a>
+          <a href="https://instagram.com/iacopopasqui" target="_blank">Instagram</a>
+
+          <a
+            class="connected"
+            href="https://www.connected-archives.com/-/galleries/photographer/iacopo-pasqui"
+            target="_blank">
+            Connected Archive
+          </a>
+        </div>
+
+        <div class="copyright">
+          © 2026 Iacopo Pasqui
+        </div>
+
+      </div>
+
+      <div class="footer-line"></div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
