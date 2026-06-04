@@ -61,9 +61,27 @@
     }
 
     .content a {
-      color: #333;
-      text-decoration: none;
-    }
+  position: relative;
+  color: #333;
+  text-decoration: none;
+}
+
+.content a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.content a:hover::after {
+  transform: scaleX(1);
+}
 
     .footer {
       margin-top: auto;
@@ -234,13 +252,12 @@
           <a href="index.html">Home</a>
           <a href="info.html">Info</a>
           <a href="portfolio.html">Portfolio</a>
-          <a href="archive.html">Archive</a>
           <a class="collecting" href="https://www.ceravento.it/portfolio-item/iacopo-pasqui/" target="_blank" rel="noopener noreferrer">Collecting</a>
           <a class="connected" href="https://www.connected-archives.com/-/galleries/photographer/iacopo-pasqui" target="_blank" rel="noopener noreferrer">Connected Archive</a>
         </div>
 
         <div class="right-links">
-          <a href="privacy.html" class="active">Privacy</a>
+          <span>Privacy</span>
           <span class="dot">·</span>
           <span class="copyright">© 2026 Iacopo Pasqui</span>
         </div>
