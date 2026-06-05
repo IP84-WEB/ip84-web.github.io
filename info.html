@@ -152,6 +152,24 @@
       opacity: 0.7;
     }
 
+    .right-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.right-links a,
+.right-links .dot {
+  font-size: 12px;
+  color: #666;
+  font-weight: 300;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.right-links a:hover {
+  opacity: 1;
+}
     @media (max-width: 768px) {
 
       .page {
@@ -242,10 +260,12 @@
           </a>
         </div>
 
-        <div class="copyright">
-          © 2026 Iacopo Pasqui
-        </div>
-
+        <div class="right-links">
+  <span>Privacy</span>
+  <span class="dot">·</span>
+  <span class="copyright">© 2026 Iacopo Pasqui</span>
+</div>
+    
       </div>
 
       <div class="footer-line"></div>
